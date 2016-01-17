@@ -18,9 +18,6 @@ class SourceSpec(dictobj.Spec):
         , help = "How long in milliseconds to poll"
         )
 
-    def to_json(self):
-        return {'url': self.url, 'interval': self.interval}
-
 class Dashboard(dictobj.Spec):
     description = dictobj.Field(
           string_spec
@@ -77,7 +74,7 @@ class Dashboard(dictobj.Spec):
             else:
                 imports.append(imprt)
 
-        sources = json.dumps({"sources": [x.to_json() for x in self.sources]})
+        sources = json.dumps({"sources": [x.as_dict() for x in self.sources]})
 
         return dedent("""
             import styles from "/modules/python_dashing.server/Dashboard.css";
