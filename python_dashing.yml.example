@@ -8,9 +8,12 @@ dashboards:
   /number:
     description: A number!
     imports:
-      - [[Number], 'components']
+      - [[Number, List], 'components']
     sources:
       - url: "/data/components/number"
         interval: 1000
+      - url: "/data/components/list"
+        interval: 1000
     layout:
-      <Number title="test" data={this.state["/data/components/number"]} />
+      <Number title="Random statistic" data={this.state["/data/components/number"]} />
+      <List title="A list of something stupid" data={this.state["/data/components/list"]} />

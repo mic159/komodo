@@ -1,9 +1,5 @@
 
 .container {
-  /* Make the content in the middle */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   max-width: 500px;
   min-width: 200px;
 }
@@ -15,10 +11,9 @@
   color: white;
 }
 
-.value {
+.list {
   color: white;
-  font-size: 55px;
+  font-size: 26px;
   font-weight: bold;
-  text-align: center;
-  display: block;
+  padding-left: 3em;
 }
