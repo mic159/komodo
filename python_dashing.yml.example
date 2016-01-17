@@ -9,5 +9,8 @@ dashboards:
     description: A number!
     imports:
       - [[Number], 'components']
+    sources:
+      - url: "/data/components/number"
+        interval: 1000
     layout:
-      <Number title="test" data={24} datasource="/data/components/number" every={1000} />
+      <Number title="test" data={this.state["/data/components/number"]} />
